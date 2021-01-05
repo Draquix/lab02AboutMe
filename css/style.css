@@ -13,10 +13,37 @@ header, footer {
 h1 {
     font-size: 40px;
 }
+h3 {
+    font-size:25px;
+    font-weight:bold;
+    color:rgb(215, 15, 241);
+}
+article {
+    padding:20px;
+    margin:10px;
+    background-color:saddlebrown
+}
+p {
+    color:rgb(173, 173, 214)
+}
 main {
     align-self:center;
-    height: 500px;
+    padding-top:10px;
+    padding-bottom:10px;
+    height: auto;
     margin:0 auto;
     background-color:turquoise;
     width:90%;
+}
+#quiz-link  {
+    text-align:center;
+    margin:15px;
+}
+a {
+    text-decoration:none;
+    font-size: 30px;
+    background-color:palevioletred;
+    padding:10px;
+    border-radius:10px;
+    margin:10px;
 }
