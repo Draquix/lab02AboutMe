@@ -1,0 +1,22 @@
+body {
+    margin: 0 auto;
+    background-color:teal;
+}
+header, footer {
+    padding: 20px;
+    color: red;
+    text-shadow: 5px 5px 5px purple;
+    text-align:center;
+    background-color:black;
+    margin:5px;
+}
+h1 {
+    font-size: 40px;
+}
+main {
+    align-self:center;
+    height: 500px;
+    margin:0 auto;
+    background-color:turquoise;
+    width:90%;
+}
