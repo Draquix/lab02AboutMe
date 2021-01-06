@@ -86,7 +86,11 @@ for (var i = 0; i < 6; i++) {
     if (allDone === true){
         break;
     }
-    alert("Nope, try again...");
+    alert("Nope, that's not on my list...");
 }
-
+var movieList = "Some of my favorite movies are: ";
+for (var i = 0; i < favoriteMovies.length; i++) {
+    movieList += favoriteMovies[i] + ",";
+}
+alert(movieList);
 alert("You got " + score + " out of 7 questions correct.");
