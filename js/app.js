@@ -55,12 +55,12 @@ for (var i = 0; i < 4; i++) {
     console.log("iteration number " + (i+1));
     if (inputInt === secretGuess) {
         alert("Hooray! You guessed the secret number!");
-        console.log("Secret number has been successfully guessed.");
+        //console.log("Secret number has been successfully guessed.");
         score ++;
         break;
     } else if (inputInt < secretGuess) {
         alert("The number you guessed is lower than the secret number.");
-        console.log("The guess was lower than the secret number");
+        //console.log("The guess was lower than the secret number");
     } else if (inputInt > secretGuess) {
         alert("The number you guessed is higher than the secret number.");
         //console.log("The guess was higher than the secret number");
@@ -73,6 +73,7 @@ alert("The number you were trying to guess was: " + secretGuess);
 
 var favoriteMovies = ["Forest Gump","Star Wars","Being John Malkovich","The Fifth Element","Lord of the Rings"];
 for (var i = 0; i < 6; i++) {
+    //console.log("movie guessing iteration number: " + (i + 1));
     var guess = prompt("What do you think one of my favorite movies are? There are multiple correct answers.");
     for (var x = 0; x < favoriteMovies.length; x++) {
         if (guess.toUpperCase() === favoriteMovies[x].toUpperCase()) {
