@@ -39,6 +39,16 @@ main {
     text-align:center;
     margin:15px;
 }
+#ten-list{
+    align-content:center;
+    margin:0 auto;
+    align-self:center;
+    width: 50%;
+}
+ol {
+    list-style:decimal;
+    list-style-type:decimal;
+}
 a {
     text-decoration:none;
     font-size: 30px;
