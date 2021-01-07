@@ -24,3 +24,6 @@ attained in submitting assignments for DeltaV Code School's 201 course. I enjoy 
 mistakes that ever before and pushing myself to produce the optimal content that my instructors and any possible
 employers expect to see from those who are willing to push themselves to excel.
 
+- Driver: Collin Zeets
+- Navigator: Daniel Rogahn
+- completed app.js functions
