@@ -11,6 +11,7 @@ header, footer {
     margin:5px;
 }
 h1 {
+    align-self: center;
     font-size: 40px;
 }
 h3 {
@@ -19,9 +20,11 @@ h3 {
     color:rgb(215, 15, 241);
 }
 article {
+    box-shadow:6px 8px 6px red;
+    align-content:center;
     padding:20px;
     margin:10px;
-    background-color:saddlebrown
+    background-color:rgb(60, 64, 68);
 }
 p {
     color:rgb(173, 173, 214)
@@ -39,10 +42,31 @@ main {
     text-align:center;
     margin:15px;
 }
+section {
+    align-content:center;
+    display:inline-block;
+}
+#job {
+    height:100px;
+    width: 25%;
+    float:right;    
+    margin-right:0px;
+    border: none;
+}
+#school {
+    width:60%;
+    float:left;
+    height:100px;
+}
 a {
+    color:blue;
+    font-weight:Bold;
+
+}
+.big-link {
     text-decoration:none;
     font-size: 30px;
-    background-color:palevioletred;
+    background-color:rgb(77, 29, 57);
     padding:10px;
     border-radius:10px;
     margin:10px;

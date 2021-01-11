@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Lab02 - About Me</title>
+        <title>About Me - Daniel Rogahn</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/reset.css">
@@ -11,7 +11,7 @@
     </head>
     <body>
         <header>
-            <h1>Lab 02: About Me</h1>
+            <h1>Daniel Rogahn's Homepage</h1>
         </header>
         <main>
             <article>
@@ -31,25 +31,6 @@
                 </p>
             </article>
             <article>
-                <h3>Education</h3>
-                <p>
-                    I went to school in the Cedar Rapids public school system.  I went to Erskine Elementary School, followed by Mckinley
-                    Middle School, and am a Washington High School alumni with the class of 2001- though I did some self study programs through
-                    Kirkwood's Lincoln Learning center and recieved my highschool diploma in the year of 2000.  I then went on to study Early
-                    Childhood Education at Kirkwood Community College and was awarded my AA degree in 2005.  I am now following the Code track
-                    with DeltaV Code School who use the Codefellows curriculum.
-                </p>
-            </article>
-            <article>
-                <h3>Job Experience</h3>
-                <p>
-                    I worked at several fast food establishments while in highschool and for a few more years after graduating.  Upon graduating
-                    College I held a Lead Teacher position at Kirkwood Kids on the college campus and then at St. Paul's Preschool.  When my son
-                    was a toddler I found it wasn't financially feasible to teach at minimum wage so I went back into food service for many years as 
-                    well as customer service in retail.
-                </p>
-            </article>
-            <article>
                 <h3>Goals</h3>
                 <p>
                     I do want to get a job in the tech industry utilizing software development skills.  I've always wanted to take my son on
@@ -61,12 +42,57 @@
                     of creating code so much and I'd love to get paid for what I've always considered a fun past time.
                 </p>
             </article>
+            <section>
+            <article id="school">
+                <h3>Education</h3>
+                <p>
+                   <ul>
+                       <li>Washington High School class of 2001</li>
+                       <li>Lincoln Learning Center Self Study graduated in 2000</li>
+                       <li>Kirkwood Community College - AA in Early Childhood Ed.</li>
+                       <li>Currently doing the Code track at DeltaV using the Codefellows curriculum</li>
+                   </ul>
+                </p>
+            </article>
+            <article id="job">
+                <h3>Job Experience</h3>
+                <p>
+                    <ul>
+                        <li>Fast food</li>
+                        <li>Customer Service</li>
+                        <li>Preschool Lead Teacher</li>
+                        <li>Retail</li>
+                    </ul>
+                </p>
+            </article>
+            </section>
+            <article id="ten-list">
+                <h3>Top 10 Favorite Bands/Artists</h3>
+                <ol>
+                    <li>Wookiefoot</li>
+                    <li>Tool</li>
+                    <li>Phish</li>
+                    <li>Woods</li>
+                    <li>Nine Inch Nails</li>
+                    <li>Puscifer</li>
+                    <li>Nirvana</li>
+                    <li>Julia Nunes</li>
+                    <li>Dub FX</li>
+                    <li>Sublime</li>          
+                </ol>
+            </article>
+            <article>
+                <h3>My Projects</h3>
+                <p>When I began being instructed in JavaScript, I wrote a game in the style of a text adventure as was popular in the 1980s just as a way to apply the concepts I was learning.
+                    <a href="https://draquix.github.io/AHerosJourney/"> A Hero's Journey</a>
+                    <a href="https://github.com/Draquix"> My GitHub Repository</a></p>
+            </article>
             <div id="quiz-link">
-                <a href="javascript:takeTheQuiz()" id="big-link"> Take the Quiz</a>
+                <a href="javascript:trueFalseQuiz()" class="big-link"> Take A Quiz About Me </a>
+                <a href="javascript:guessTheNumber()" class="big-link"> Play A Number Guessing Game </a>
             </div>
-        </main>
         <footer>
-            <h6>Created on 01/05/2021 by Daniel Rogahn</h6>
+            <h2>Created on 01/05/2021 by Daniel Rogahn </h2>
         </footer>
         
         <script src="js/app.js"></script>
