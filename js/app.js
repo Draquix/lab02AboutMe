@@ -1,61 +1,96 @@
+
 'use strict';
 
-var userName = prompt("What is your name?");
+//var userName = prompt("What is your name?");
 
-//console.log("The user name entered was: " + userName + ".");
-alert("Hello, " + userName + "!  Welcome to my page.");
+//alert("Hello, " + userName + "!  Welcome to my page.");
 
-function takeTheQuiz(){
-    var score = 0;
-    var answerOne = prompt("Did I attend college in my twenties?");
-    answerOne =answerOne.toUpperCase();
-    if (answerOne === 'Y' || answerOne === 'YES') {
-        alert("Correct!");
-        //console.log("Correct");
-        score ++;
-    } else {
-        alert("No, I actually did get my associate's degree at Kirkwood Community College in Early Childhood Education...");
-        //console.log("Wrong.");
+
+var score = 0;
+
+var questions = [
+    "Did I attend college in my twenties?",
+    "Do I have cats opposed to a dog?",
+    "Do I have a son who is 15 years old?",
+    "Is my favorite series of videogames the Madden NFL titles?",
+    "Have I worked with any languages aside from the JavaScript used in this website?"
+];
+var answers = [true,false,true,false,true];
+
+function trueFalseQuiz(){
+    for (var i = 0; i < questions.length; i++) {
+        console.log("Entering for loop")
+        do {
+            console.log("Entering do loop")
+            var input = prompt(questions[i]);
+        } while ( !(input.toUpperCase() === "Y" || input.toUpperCase() === "YES" || input.toUpperCase() === "N" || input.toUpperCase() === "NO") );
+
+        if (answers[i] === true) {
+            if (input.toUpperCase() === "Y" || input.toUpperCase() === "YES") {
+                //console.log("Q: " + questions[i] + " - A: " + answers[i] + " -- User got it correct.  Score is: " + score);
+                alert("Correct!");
+                score ++;
+            } else {
+                alert("Wrong...");
+                //console.log("Q: " + questions[i] + " - A: " + answers[i] + " -- User got it wrong.  Score is: " + score);
+            }
+        } else {
+            if (input.toUpperCase() === "N" || input.toUpperCase() === "NO") {
+                //console.log("Q: " + questions[i] + " - A: " + answers[i] + " -- User got it correct.  Score is: " + score);
+                alert("Correct!");
+                score ++;
+            } else {
+                alert("Wrong...");
+                //console.log("Q: " + questions[i] + " - A: " + answers[i] + " -- User got it wrong.  Score is: " + score);
+            }
+        }
     }
-    var answerTwo = prompt("Do I have cats opposed to a dog?");
-    answerTwo = answerTwo.toUpperCase();
-    if (answerTwo === 'N' || answerTwo === 'NO') {
-        alert("Correct!");
-        //console.log("Correct");
-        score ++;
-    } else {
-        alert("No, I did have two cats at one time, but I currently have a dog named, Honey.");
-        //console.log("Wrong.");
+    guessingTheMovie();
+}
+function guessTheNumber(){
+    var secretGuess = Math.floor(Math.random() * 10) + 1;
+    for (var i = 0; i < 4; i++) {
+        var input = prompt("Guess a number between 1 and 10");
+        console.log(i + 1 + " is the iteration.");
+        var inputInt = parseInt(input, 10);
+        console.log("iteration number " + (i+1));
+        if (inputInt === secretGuess) {
+            alert("Hooray! You guessed the secret number!");
+            score ++;
+            break;
+        } else if (inputInt < secretGuess) {
+            alert("The number you guessed is lower than the secret number.");
+        } else if (inputInt > secretGuess) {
+            alert("The number you guessed is higher than the secret number.");
+        } else {
+            alert("There is an error, this message shouldn't be reached.");
+            console.log("Error.");
+        }
     }
-    var answerThree = prompt("Do I have a son who is 15 years old?");
-    answerThree = answerThree.toUpperCase();
-    if (answerThree === 'Y' || answerThree === 'YES') {
-        alert("Correct!");
-        //console.log("Correct.");
-        score++;
-    } else {
-        alert("No, I do have a son named Connor who turned 15 in December of 2020...");
-        //console.log("Wrong.");
+    alert("The number you were trying to guess was: " + secretGuess);
+}
+function guessingTheMovie(){
+    var favoriteMovies = ["Forest Gump","Star Wars","Being John Malkovich","The Fifth Element","Lord of the Rings"];
+    for (var i = 0; i < 6; i++) {
+        //console.log("movie guessing iteration number: " + (i + 1));
+        var guess = prompt("What do you think one of my favorite movies are? There are multiple correct answers.");
+        for (var x = 0; x < favoriteMovies.length; x++) {
+            if (guess.toUpperCase() === favoriteMovies[x].toUpperCase()) {
+                alert("You are correct, I love "+ guess + "!");
+                score ++;
+                var allDone = true;
+                break;
+            }
+        }
+        if (allDone === true){
+            break;
+        }
+        alert("Nope, that's not on my list...");
     }
-    var answerFour = prompt("Is my favorite series of videogames the Madden NFL titles?");
-    answerFour = answerFour.toUpperCase();
-    if (answerFour === 'N' || answerFour === 'NO') {
-        alert("Correct!");
-        //console.log("Correct.");
-        score++;
-    } else {
-        alert("No, I don't really enjoy sports games, but I do like to play MMORPG's for the social aspect as well as the mechanics of being able to train the character to overcome tougher and tougher obstacles.");
-        //console.log("Wrong.");
+    var movieList = "Some of my favorite movies are: ";
+    for (var i = 0; i < favoriteMovies.length; i++) {
+        movieList += favoriteMovies[i] + ",";
     }
-    var answerFive = prompt("Have I worked with any languages aside from the JavaScript used in this website?");
-    answerFive = answerFive.toUpperCase();
-    if (answerFive === 'Y' || answerFive === 'YES') {
-        alert("Correct!");
-        //console.log("Correct.");
-        score++;
-    } else {
-        alert("No, I've also learned a bit of Python on the side, and my first experiences with coding were on a TRS-80 writing in BASIC when I was 11.");
-        //console.log("Wrong.");
-    }
-    alert("You got " + score + " out of 5 questions correct.");
+    alert(movieList);
+    alert("You got " + score + " out of 7 questions correct.");
 }
